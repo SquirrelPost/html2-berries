@@ -1,0 +1,15 @@
+.caption {
+  @include font(16px);
+
+  @media (min-width: $tablet-width) {
+    @include font(18px);
+  }
+
+  &--big {
+    @include font(20px);
+
+    @media (min-width: $tablet-width) {
+      @include font(28px);
+    }
+  }
+}

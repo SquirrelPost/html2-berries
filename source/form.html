@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Ягоды с доставкой.</title>
+  <title>Ягоды с доставкой: форма заказа.</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="preload" href="js/script.js" as="script">
@@ -18,7 +18,7 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo" title="Вы сейчас здесь">
+    <a class="main-header__logo logo" href="index.html">
       <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52" viewBox="0 0 52 52"
         fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -75,212 +75,176 @@
           <a class="site__link" href="#">Каталог</a>
         </li>
         <li class="main-nav__site-item site__item">
-          <a class="site__link" href="#news">Новости</a>
+          <a class="site__link" href="index.html#news">Новости</a>
         </li>
         <li class="main-nav__site-item site__item">
           <a class="site__link" href="#contacts">Контакты</a>
         </li>
-        <li class="main-nav__site-item site__item">
-          <a class="site__link" href="form.html">Заказать</a>
+        <li class="main-nav__site-item site__item site__item--current">
+          <a class="site__link" title="Вы сейчас здесь">Заказать</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="page-main">
-    <div class="hero">
-      <h1 class="hero__title headline">Ягоды с доставкой</h1>
-      <ul class="hero__list">
-        <li class="hero__item hero__item--leaf">
-          <p class="hero__text">Отборные ягоды</p>
-        </li>
-        <li class="hero__item hero__item--snowflake">
-          <p class="hero__text">Натуральный вкус сохранён методом шоковой заморозки</p>
-        </li>
-        <li class="hero__item hero__item--delivery">
-          <p class="hero__text">Доставка по Санкт-Петербургу</p>
-        </li>
-      </ul>
-      <a class="hero__link button" href="form.html">Заказать</a>
+    <div class="inner-hero">
+      <h1 class="inner-hero__title headline">Закажи ягоды</h1>
+      <p class="inner-hero__text">Мы соберем для вас ягоды и доставим их в удобном для вас виде - свежими или
+        замороженными</p>
     </div>
-    <section class="products">
-      <h2 class="products__title headline">Каталог</h2>
-      <ul class="products__list">
-        <li class="products__item product-card">
-          <a class="product-card__link" href="#">
-            <picture>
-              <!-- <source type="image/webp"
-                srcset="img/products/catalog-raspberry.webp 1x, img/products/catalog-raspberry@2x.webp 2x"> -->
-              <img class="product-card__image" src="img/products/catalog-raspberry.jpg" width="264" height="180"
-                srcset="img/products/catalog-raspberry@2x.jpg 2x" alt="Сочные подмёрзшие ягоды малины.">
-            </picture>
-          </a>
-          <a class="product-card__link-title" href="#">
-            <h3 class="product-card__title">Малина</h3>
-          </a>
-          <p class="product-card__description">
-            <span class="product-card__price">350 ₽</span>
-            <span class="product-card__weight">за 1 кг</span>
-          </p>
-          <a class="product-card__order button" href="form.html">Заказать</a>
-        </li>
-        <li class="products__item product-card">
-          <a class="product-card__link" href="#">
-            <picture>
-              <!-- <source type="image/webp"
-                srcset="img/products/catalog-blackberry.webp 1x, img/products/catalog-blackberry@2x.webp 2x"> -->
-              <img class="product-card__image" src="img/products/catalog-blackberry.jpg" width="264" height="180"
-                srcset="img/products/catalog-blackberry@2x.jpg 2x" alt="Сочные подмёрзшие ягоды ежевики.">
-            </picture>
-          </a>
-          <a class="product-card__link-title" href="#">
-            <h3 class="product-card__title">Ежевика</h3>
-          </a>
-          <p class="product-card__description">
-            <span class="product-card__price">550 ₽</span>
-            <span class="product-card__weight">за 1 кг</span>
-          </p>
-          <a class="product-card__order button" href="form.html">Заказать</a>
-        </li>
-        <li class="products__item product-card">
-          <a class="product-card__link" href="#">
-            <picture>
-              <!-- <source type="image/webp"
-                srcset="img/products/catalog-cowberry.webp 1x, img/products/catalog-cowberry@2x.webp 2x"> -->
-              <img class="product-card__image" src="img/products/catalog-cowberry.jpg" width="264" height="180"
-                srcset="img/products/catalog-cowberry@2x.jpg 2x" alt="Сочные подмёрзшие ягоды брусники.">
-            </picture>
-          </a>
-          <a class="product-card__link-title" href="#">
-            <h3 class="product-card__title">Брусника</h3>
-          </a>
-          <p class="product-card__description">
-            <span class="product-card__price">390 ₽</span>
-            <span class="product-card__weight">за 1 кг</span>
-          </p>
-          <a class="product-card__order button" href="form.html">Заказать</a>
-        </li>
-        <li class="products__item product-card">
-          <a class="product-card__link" href="#">
-            <picture>
-              <!-- <source type="image/webp"
-                srcset="img/products/catalog-strawberry.webp 1x, img/products/catalog-strawberry@2x.webp 2x"> -->
-              <img class="product-card__image" src="img/products/catalog-strawberry.jpg" width="264" height="180"
-                srcset="img/products/catalog-strawberry@2x.jpg 2x" alt="Сочные подмёрзшие ягоды клубники.">
-            </picture>
-          </a>
-          <a class="product-card__link-title" href="#">
-            <h3 class="product-card__title">Клубника</h3>
-          </a>
-          <p class="product-card__description">
-            <span class="product-card__price">450 ₽</span>
-            <span class="product-card__weight">за 1 кг</span>
-          </p>
-          <a class="product-card__order button" href="form.html">Заказать</a>
-        </li>
-        <li class="products__item product-card">
-          <a class="product-card__link" href="#">
-            <picture>
-              <!-- <source type="image/webp"
-                srcset="img/products/catalog-cherry.webp 1x, img/products/catalog-cherry@2x.webp 2x"> -->
-              <img class="product-card__image" src="img/products/catalog-cherry.jpg" width="264" height="180"
-                srcset="img/products/catalog-cherry@2x.jpg 2x" alt="Сочные яркие ягоды вишни.">
-            </picture>
-          </a>
-          <a class="product-card__link-title" href="#">
-            <h3 class="product-card__title">Вишня</h3>
-          </a>
-          <p class="product-card__description">
-            <span class="product-card__price">375 ₽</span>
-            <span class="product-card__weight">за 1 кг</span>
-          </p>
-          <a class="product-card__order button" href="form.html">Заказать</a>
-        </li>
-        <li class="products__item product-card">
-          <a class="product-card__link" href="#">
-            <picture>
-              <!-- <source type="image/webp"
-                srcset="img/products/catalog-gooseberry.webp 1x, img/products/catalog-gooseberry@2x.webp 2x"> -->
-              <img class="product-card__image" src="img/products/catalog-gooseberry.jpg" width="264" height="180"
-                srcset="img/products/catalog-gooseberry@2x.jpg 2x" alt="Сочные яркие ягоды крыжовника.">
-            </picture>
-          </a>
-          <a class="product-card__link-title" href="#">
-            <h3 class="product-card__title">Крыжовник</h3>
-          </a>
-          <p class="product-card__description">
-            <span class="product-card__price">300 ₽</span>
-            <span class="product-card__weight">за 1 кг</span>
-          </p>
-          <a class="product-card__order button" href="form.html">Заказать</a>
-        </li>
-        <li class="products__item product-card product-card--extra">
-          <a class="product-card__link" href="#">
-            <picture>
-              <!-- <source type="image/webp"
-                srcset="img/products/catalog-blueberry.webp 1x, img/products/catalog-blueberry@2x.webp 2x"> -->
-              <img class="product-card__image" src="img/products/catalog-blueberry.jpg" width="264" height="180"
-                srcset="img/products/catalog-blueberry@2x.jpg 2x" alt="Сочные насыщенные ягоды голубики.">
-            </picture>
-          </a>
-          <a class="product-card__link-title" href="#">
-            <h3 class="product-card__title">Голубика</h3>
-          </a>
-          <p class="product-card__description">
-            <span class="product-card__price">510 ₽</span>
-            <span class="product-card__weight">за 1 кг</span>
-          </p>
-          <a class="product-card__order button" href="form.html">Заказать</a>
-        </li>
-        <li class="products__item product-card product-card--extra">
-          <a class="product-card__link" href="#">
-            <picture>
-              <!-- <source type="image/webp"
-                srcset="img/products/catalog-cranberry.webp 1x, img/products/catalog-cranberry@2x.webp 2x"> -->
-              <img class="product-card__image" src="img/products/catalog-cranberry.jpg" width="264" height="180"
-                srcset="img/products/catalog-cranberry@2x.jpg 2x" alt="Сочные подмёрзшие ягоды клюквы.">
-            </picture>
-          </a>
-          <a class="product-card__link-title" href="#">
-            <h3 class="product-card__title">Клюква</h3>
-          </a>
-          <p class="product-card__description">
-            <span class="product-card__price">320 ₽</span>
-            <span class="product-card__weight">за 1 кг</span>
-          </p>
-          <a class="product-card__order button" href="form.html">Заказать</a>
-        </li>
-      </ul>
-    </section>
-    <section class="news" id="news">
-      <h2 class="news__title headline">Что новенького?</h2>
-      <ul class="news__list">
-        <li class="news__item">
-          <article class="news__article article">
-            <h3 class="article__title caption caption--big">Новый урожай клубники</h3>
-            <p class="article__text">К нам поступила свежая сочная ароматная клубника
-              из Алтайского края. Крупные отборные ягоды можно приобрести свежими от 200 гр, или замороженными от 1 кг.
-              Поторопитесь, сезон клубники короткий и свежие ягоды скоро закончатся.</p>
-            <span class="article__date">22 июня 2022</span>
-          </article>
-        </li>
-        <li class="news__item">
-          <article class="news__article article">
-            <h3 class="article__title caption caption--big">В июне дарим скидку 15% на все свежие ягоды</h3>
-            <p class="article__text">Свежие ягоды урожая этого года со скидкой 15%. Клубнику, малину, голубику, вишню
-              доставим от 200 гр. </p>
-            <span class="article__date">15 июня 2022</span>
-          </article>
-        </li>
-        <li class="news__item">
-          <article class="news__article article">
-            <h3 class="article__title caption caption--big">Микс из ягод</h3>
-            <p class="article__text">Мы приготовим для вас смеси из различных замороженных ягод по вашему пожеланию.
-              Ягодные смеси удобно использовать для приготовления напитков. Все ягоды замораживаются методом шоковой
-              заморозки, что позволяет сохранить их естественный вкус и аромат.</p>
-            <span class="article__date">02 июня 2022</span>
-          </article>
-        </li>
-      </ul>
+    <section class="selection">
+      <h2 class="visually-hidden">Заполните анкету и получите свои ягоды.</h2>
+      <form class="form caption" action="https://echo.htmlacademy.ru/" method="post">
+        <!-- Чтобы показать состояние ошибки, присвойте input класс "field--error" -->
+        <fieldset class="form__group">
+          <legend class="form__legend caption caption--big">Выберите ягоды</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="cowberry">
+                <span class="control__mark"></span>
+                <span class="control__label">брусника</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="cherry">
+                <span class="control__mark"></span>
+                <span class="control__label">вишня</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="blueberry">
+                <span class="control__mark"></span>
+                <span class="control__label">голубика</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="blackberry">
+                <span class="control__mark"></span>
+                <span class="control__label">ежевика</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="strawberry">
+                <span class="control__mark"></span>
+                <span class="control__label">клубника</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="cranberry">
+                <span class="control__mark"></span>
+                <span class="control__label">клюква</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="gooseberry">
+                <span class="control__mark"></span>
+                <span class="control__label">крыжовник</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="raspberry">
+                <span class="control__mark"></span>
+                <span class="control__label">малина</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="cloudberry" disabled>
+                <span class="control__mark"></span>
+                <span class="control__label">морошка</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="blueberry" disabled>
+                <span class="control__mark"></span>
+                <span class="control__label">черника</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="form__legend caption caption--big">Вид хранения</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="fresh-berries">
+                <span class="control__mark"></span>
+                <span class="control__label">свежие ягоды</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="frozen-berries">
+                <span class="control__mark"></span>
+                <span class="control__label">замороженные ягоды</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="checkbox" name="mixed-berries">
+                <span class="control__mark"></span>
+                <span class="control__label">ягодные миксы</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="form__legend caption caption--big">Способ доставки</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="radio" name="delivery" value="spb" checked>
+                <span class="control__mark"></span>
+                <span class="control__label">Доставка (по СПБ в пределах КАД)</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label control">
+                <input class="visually-hidden control__input" type="radio" name="delivery" value="pickup">
+                <span class="control__mark"></span>
+                <span class="control__label">Самовывоз (Набережная Обводного канала, 101)</span>
+              </label>
+            </li>
+          </ul>
+          </div>
+        </fieldset>
+        <fieldset class="form__group">
+          <legend class="form__legend form__legend--centered caption caption--big">Ваши контакты</legend>
+          <label class="form__label">
+            <span class="form__label-text">Имя *</span>
+            <input class="form__field field" type="text" pattern="^[0-9A-Za-zА-Яа-яЁё\s]+$" name="client-name"
+              placeholder="Как к вам обращаться?" required>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Телефон *</span>
+            <input class="form__field field" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$"
+              name="client-phone" placeholder="+7 ххх ххх хх хх" required>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Email *</span>
+            <input class="form__field field" type="email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+              name="client-email" placeholder="Ваш email" required>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Адрес *</span>
+            <input class="form__field field" type="text" name="client-address"
+              placeholder="Адрес в Санкт-Петербурге" required>
+          </label>
+          <label class="form__label" for="client-comment">Пожелания к заказу</label>
+          <textarea class="form__field field field--textarea" id="client-comment" name="client-comment" rows="5"
+            placeholder="Чем мы можем вам помочь?"></textarea>
+        </fieldset>
+        <button class="form__button button" type="submit">Заказать</button>
+      </form>
     </section>
     <section class="contacts" id="contacts">
       <h2 class="contacts__title headline">Где забрать ягоды?</h2>
@@ -315,7 +279,7 @@
   </main>
   <footer class="main-footer">
     <div class="main-footer__component">
-      <a class="main-footer__logo logo" title="Вы сейчас здесь">
+      <a class="main-footer__logo logo" href="index.html">
         <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52" viewBox="0 0 52 52"
           fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
