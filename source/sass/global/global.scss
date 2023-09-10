@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+body {
+  @include font(14px);
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: $color-white;
+  color: $color-black;
+
+  @media (min-width: $tablet-width) {
+    @include font(16px);
+  }
+}
