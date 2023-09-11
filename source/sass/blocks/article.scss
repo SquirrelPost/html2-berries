@@ -1,0 +1,33 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  padding: 30px 18px 70px;
+  border: 2px solid $color-green;
+  border-radius: 40px;
+  background-image: url("../img/sprite.svg#icon-berry-branch");
+  background-repeat: no-repeat;
+  background-size: 76px 32px;
+  background-position: bottom 24px center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 494px;
+  }
+}
+
+.article__title {
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.article__text {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.article__date {
+  margin-top: auto;
+  align-self: flex-end;
+}

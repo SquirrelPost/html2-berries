@@ -1,0 +1,34 @@
+.copyright {
+  @include link-reset;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 111px;
+
+  //   @media (min-width: $tablet-width) {
+  //     max-width: 168px;
+  //     justify-self: flex-end;
+  //     flex-wrap: wrap;
+  //     padding-block: 2px;
+  //   }
+
+  &:hover {
+    color: $color-green-hover;
+  }
+
+  &:active {
+    color: $color-green-active;
+  }
+
+  &:focus-visible {
+    @include focus-outline;
+  }
+}
+
+.copyright__text {
+  @include font(11px);
+}
+
+.copyright__icon {
+  flex-shrink: 0;
+}

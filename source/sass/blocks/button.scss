@@ -1,0 +1,45 @@
+.button {
+  @include font(20px);
+  font-family: "Raleway", "Arial", sans-serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 336px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 40px;
+  background-color: $color-purple;
+  color: $color-white;
+  box-shadow: 0 4px 4px 0 rgba(88, 13, 101, 0.25);
+  padding: 14px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    @include font(28px);
+    padding: 16px;
+  }
+
+  &--catalog {
+    box-shadow: none;
+  }
+
+  &:hover {
+    background-color: $color-purple-hover;
+  }
+
+  &:active {
+    background-color: $color-purple-active;
+  }
+
+  &:focus-visible {
+    @include focus-outline;
+  }
+
+  &:disabled {
+    background-color: $color-leaf-grey;
+    opacity: 0.5;
+  }
+}

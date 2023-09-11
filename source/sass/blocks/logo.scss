@@ -1,0 +1,72 @@
+.logo {
+  color: $color-green;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $mobile-width-only) {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  // @media (min-width: $tablet-width) {
+  //   display: flex;
+  //   align-items: center;
+  //   padding-top: 6px;
+  //   width: 174px;
+  //   height: 52px;
+  // }
+
+  // @media (min-width: $desktop-width) {
+  //   width: 202px;
+  //   height: 60px;
+  // }
+
+  &[href]:hover {
+    color: $color-green-hover;
+  }
+
+  &[href]:active {
+    color: $color-green-active;
+  }
+
+  &[href]:focus-visible {
+    @include focus-outline;
+    outline-offset: -3px;
+
+    @media (min-width: $tablet-width) {
+      outline-offset: 2px;
+    }
+  }
+}
+
+// .logo__icon {
+//   @media (min-width: $tablet-width) {
+//     width: 61px;
+//     height: 50px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     width: 70px;
+//     height: 59px;
+//   }
+// }
+
+.logo__text {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  // @media (min-width: $tablet-width) {
+  //   margin-left: 12px;
+  // }
+
+  // @media (min-width: $desktop-width) {
+  //   width: 118px;
+  //   height: 22px;
+  //   margin-top: 0;
+  //   margin-left: 14px;
+  //   align-self: center;
+  // }
+}
