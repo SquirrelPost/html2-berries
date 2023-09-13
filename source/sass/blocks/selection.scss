@@ -1,0 +1,6 @@
+.selection {
+  @include centerer;
+  @include leaf-line;
+  margin-bottom: 61px;
+  padding-bottom: 121px;
+}

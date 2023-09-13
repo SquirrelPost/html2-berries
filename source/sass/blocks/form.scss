@@ -1,0 +1,240 @@
+// .form {
+// }
+
+// .form__wrapper {
+//   @media (min-width: $desktop-width) {
+//     @include container;
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: 80px;
+//     margin-bottom: 2px;
+//   }
+// }
+
+.form__group {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  border: none;
+
+  &--contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 32px;
+  }
+}
+
+.form__legend {
+  color: $color-green;
+  margin-bottom: 24px;
+  padding: 0;
+
+  &--centered {
+    margin-bottom: 32px;
+  }
+
+  //   @media (min-width: $tablet-width) {
+  // }
+
+  //   @media (min-width: $desktop-width) {
+  //   }
+}
+
+// .form__group-wrapper {
+//   @include container;
+//   display: grid;
+//   gap: 14px;
+//   padding-bottom: 24px;
+
+//   @media (min-width: $tablet-width) {
+//     gap: 20px;
+//     padding: 0 69px 0 70px;
+//     margin-bottom: 65px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     @include container;
+//     margin-bottom: 67px;
+
+//     &--information {
+//       padding: 0;
+//     }
+
+//     &--contacts {
+//       grid-template-columns: repeat(2, 1fr);
+//       gap: 80px;
+//     }
+//   }
+// }
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  line-height: 20px;
+  //   align-items: center;
+
+  //   &--with-icon {
+  //     gap: 10px;
+  //     position: relative;
+
+  //     @media (min-width: $tablet-width) {
+  //       gap: 20px;
+  //     }
+  //   }
+
+  //   @media (min-width: $desktop-width) {
+  //     flex-grow: 1;
+  //   }
+}
+
+.form__label-text {
+  padding-left: 12px;
+  //   flex-shrink: 0;
+  //   max-width: 100px;
+  //   color: $color-grey;
+  //   text-overflow: ellipsis;
+  //   overflow: hidden;
+
+  &--wishes {
+    padding-left: 22px;
+  }
+
+  //   @media (min-width: $tablet-width) {
+  //     max-width: 117px;
+  //   }
+}
+
+.form__label-asterisk {
+  color: $color-error;
+}
+
+.form__message {
+  position: relative;
+  padding-left: 12px;
+  width: fit-content;
+
+  &--error {
+    color: $color-error;
+  }
+}
+
+// .form__field-icon {
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   right: 15px;
+//   width: 20px;
+//   height: 20px;
+//   background-color: $color-dark-grey;
+//   background-repeat: no-repeat;
+//   background-position: center;
+
+//   @media (min-width: $tablet-width) {
+//     right: 17px;
+//   }
+
+//   &--tel {
+//     mask-image: url("../img/sprite.svg#icon-phone");
+//   }
+
+//   &--email {
+//     mask-image: url("../img/sprite.svg#icon-mail");
+//   }
+// }
+
+// .form__list-wrapper {
+//   @media (min-width: $tablet-width) {
+//     padding-inline: 70px 69px;
+//     padding-top: 8px;
+//     margin-bottom: 75px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     padding: 0;
+//     margin-bottom: 65px;
+//   }
+// }
+
+.form__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  max-height: 320px;
+  overflow: auto;
+
+  //   @media (min-width: $tablet-width) {
+  //     padding: 0 70px 52px;
+  //   }
+
+  //   &--with-radio {
+  //     padding-block: 22px 19px;
+  //     color: $color-dark-grey;
+
+  //     @media (min-width: $tablet-width) {
+  //       padding: 25px 28px;
+  //       border: 1px solid $color-smoky-grey;
+  //     }
+  //   }
+
+  //   &--with-checkbox {
+  //     @media (min-width: $tablet-width) {
+  //       gap: 32px 60px;
+  //       grid-template-columns: repeat(2, 1fr);
+  //     }
+
+  //     @media (min-width: $desktop-width) {
+  //       @include container;
+  //       gap: 54px 80px;
+  //       padding-bottom: 61px;
+  //       grid-template-columns: repeat(4, 1fr);
+  //     }
+  //   }
+}
+
+// .form__button-wrapper {
+//   @include container;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   gap: 21px;
+
+//   @media (min-width: $tablet-width) {
+//     padding-inline: 70px;
+//     flex-direction: row;
+//     gap: 64px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     @include container;
+//     gap: 84px;
+//   }
+// }
+
+// .form__button {
+//   padding: 10px;
+
+//   @media (min-width: $tablet-width) {
+//     line-height: 26px;
+//     max-width: 282px;
+//     padding: 13px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     max-width: 568px;
+//   }
+// }
+
+// .form__signature {
+//   @include font(14px, 16px);
+//   font-family: "Lato", "Arial", sans-serif;
+//   text-transform: none;
+
+//   @media (min-width: $tablet-width) {
+//     font-size: 16px;
+//     margin-bottom: 7px;
+//   }
+// }

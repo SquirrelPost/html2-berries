@@ -5,12 +5,16 @@
   gap: 8px;
   max-width: 111px;
 
-  //   @media (min-width: $tablet-width) {
-  //     max-width: 168px;
-  //     justify-self: flex-end;
-  //     flex-wrap: wrap;
-  //     padding-block: 2px;
-  //   }
+  @media (min-width: $tablet-width) {
+    max-width: 154px;
+    justify-self: flex-end;
+    flex-wrap: wrap;
+    padding-block: 17px 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 16px 12px;
+  }
 
   &:hover {
     color: $color-green-hover;
@@ -26,9 +30,16 @@
 }
 
 .copyright__text {
-  @include font(11px);
+  @media (max-width: $mobile-width-only) {
+    @include font(11px);
+  }
 }
 
 .copyright__icon {
   flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 26px;
+    height: 32px;
+  }
 }

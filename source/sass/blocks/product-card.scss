@@ -4,6 +4,7 @@
   align-items: center;
   padding-bottom: 54px;
   border-radius: 40px;
+  max-width: 264px;
   box-shadow: 0 4px 4px 0 rgba(88, 13, 101, 0.15);
 
   //   @media (min-width: $tablet-width) {
@@ -124,7 +125,7 @@
 .product-card__order {
   max-width: 220px;
 
-  //   @media (min-width: $tablet-width) {
-  //     margin-top: auto;
-  //   }
+    @media (min-width: $tablet-width) {
+      margin-top: auto;
+    }
 }

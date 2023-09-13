@@ -18,45 +18,49 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo" href="index.html">
-      <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52">
-        <use href="img/sprite.svg#logo"></use>
-      </svg>
-      <svg class="logo__text" role="img" aria-label="Текст логотипа Ягод." width="67" height="50">
-        <use href="img/sprite.svg#logo-text"></use>
-      </svg>
-    </a>
-    <!-- При отключенном js - отработает класс "main-nav--nojs". Открытое меню - "main-nav--opened". Закрытое меню - "main-nav--closed"-->
-    <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
-      </button>
-      <ul class="main-nav__list site">
-        <li class="main-nav__site-item site__item">
-          <a class="site__link" href="#">Каталог</a>
-        </li>
-        <li class="main-nav__site-item site__item">
-          <a class="site__link" href="index.html#news">Новости</a>
-        </li>
-        <li class="main-nav__site-item site__item">
-          <a class="site__link" href="#contacts">Контакты</a>
-        </li>
-        <li class="main-nav__site-item site__item site__item--current">
-          <a class="site__link" title="Вы сейчас здесь">Заказать</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="main-header__container">
+      <a class="main-header__logo logo" href="index.html" title="На главную.">
+        <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52">
+          <use href="img/sprite.svg#logo"></use>
+        </svg>
+        <svg class="logo__text" role="img" aria-label="Текст логотипа Ягод." width="67" height="50">
+          <use href="img/sprite.svg#logo-text"></use>
+        </svg>
+      </a>
+      <!-- При отключенном js - отработает класс "main-nav--nojs". Открытое меню - "main-nav--opened". Закрытое меню - "main-nav--closed"-->
+      <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <ul class="main-nav__list site">
+          <li class="main-nav__site-item site__item">
+            <a class="site__link" href="index.html#catalog">Каталог</a>
+          </li>
+          <li class="main-nav__site-item site__item">
+            <a class="site__link" href="index.html#news">Новости</a>
+          </li>
+          <li class="main-nav__site-item site__item">
+            <a class="site__link" href="#contacts">Контакты</a>
+          </li>
+          <li class="main-nav__site-item site__item site__item--current">
+            <a class="site__link" title="Вы сейчас здесь">Заказать</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main class="page-main">
+
+  <main class="page-main page-main--inner">
     <div class="inner-hero">
-      <h1 class="inner-hero__title headline">Закажи ягоды</h1>
-      <p class="inner-hero__text">Мы соберем для вас ягоды и доставим их в удобном для вас виде - свежими или
-        замороженными</p>
+      <div class="inner-hero__container">
+        <h1 class="inner-hero__title headline">Закажи ягоды</h1>
+        <p class="inner-hero__text">Мы соберем для вас ягоды и&nbsp;доставим их в удобном для&nbsp;вас виде - свежими
+          или замороженными</p>
+      </div>
     </div>
     <section class="selection">
       <h2 class="visually-hidden">Заполните анкету и получите свои ягоды.</h2>
       <form class="form caption" action="https://echo.htmlacademy.ru/" method="post">
-        <!-- Чтобы показать состояние ошибки, присвойте input класс "field--error" -->
         <fieldset class="form__group">
           <legend class="form__legend caption caption--big">Выберите ягоды</legend>
           <ul class="form__list">
@@ -165,56 +169,63 @@
               <label class="form__label control">
                 <input class="visually-hidden control__input" type="radio" name="delivery" value="spb" checked>
                 <span class="control__mark"></span>
-                <span class="control__label">Доставка (по СПБ в пределах КАД)</span>
+                <span class="control__label">Доставка <br>(по СПБ в пределах <br>КАД)</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__label control">
                 <input class="visually-hidden control__input" type="radio" name="delivery" value="pickup">
                 <span class="control__mark"></span>
-                <span class="control__label">Самовывоз (Набережная Обводного канала, 101)</span>
+                <span class="control__label">Самовывоз <br>(Набережная Обводного канала, 101)</span>
               </label>
             </li>
           </ul>
           </div>
         </fieldset>
-        <fieldset class="form__group">
+        <!-- Чтобы показать состояние ошибки, присвойте input или textarea c классом "field" модификатор "field--error".
+        Чтобы вывести подсказку под полем с ошибкой - добавьте "<span class="form__message form__message--error">Подсказка</span>"
+        с нужным текстом после input внутри label -->
+        <fieldset class="form__group form__group--contacts">
           <legend class="form__legend form__legend--centered caption caption--big">Ваши контакты</legend>
           <label class="form__label">
-            <span class="form__label-text">Имя *</span>
+            <span class="form__label-text">Имя <span class="form__label-asterisk">*</span></span>
             <input class="form__field field" type="text" pattern="^[0-9A-Za-zА-Яа-яЁё\s]+$" name="client-name"
               placeholder="Как к вам обращаться?" required>
           </label>
           <label class="form__label">
-            <span class="form__label-text">Телефон *</span>
+            <span class="form__label-text">Телефон <span class="form__label-asterisk">*</span></span>
             <input class="form__field field" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$"
               name="client-phone" placeholder="+7 ххх ххх хх хх" required>
           </label>
           <label class="form__label">
-            <span class="form__label-text">Email *</span>
+            <span class="form__label-text">Email <span class="form__label-asterisk">*</span></span>
             <input class="form__field field" type="email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
               name="client-email" placeholder="Ваш email" required>
           </label>
           <label class="form__label">
-            <span class="form__label-text">Адрес *</span>
-            <input class="form__field field" type="text" name="client-address" placeholder="Адрес в Санкт-Петербурге"
-              required>
+            <span class="form__label-text">Адрес <span class="form__label-asterisk">*</span></span>
+            <textarea class="form__field field field--textarea" name="client-address" rows="3"
+              placeholder="Адрес в Санкт-Петербурге" required></textarea>
           </label>
-          <label class="form__label" for="client-comment">Пожелания к заказу</label>
-          <textarea class="form__field field field--textarea" id="client-comment" name="client-comment" rows="5"
-            placeholder="Чем мы можем вам помочь?"></textarea>
+          <label class="form__label">
+            <span class="form__label-text form__label-text--wishes">Пожелания к заказу</span>
+            <textarea class="form__field field field--textarea" name="client-comment" rows="5"
+              placeholder="Чем мы можем вам помочь?"></textarea>
+          </label>
         </fieldset>
         <button class="form__button button" type="submit">Заказать</button>
       </form>
     </section>
     <section class="contacts" id="contacts">
-      <h2 class="contacts__title headline">Где забрать ягоды?</h2>
-      <p class="contacts__description">Забери ягоды с нашего склада по адресу:</p>
-      <address class="contacts__address">
-        <p class="contacts__street">Набережная Обводного канала, 101</p>
-        <a class="contacts__phone" href="tel:+79105244118">+ 7 910 524 41 18</a>
-        <a class="contacts__mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
-      </address>
+      <div class="contacts__container">
+        <h2 class="contacts__title headline">Где забрать ягоды?</h2>
+        <p class="contacts__description caption">Забери ягоды с нашего склада по&nbsp;адресу:</p>
+        <address class="contacts__address">
+          <p class="contacts__component contacts__component--leaf">Набережная Обводного канала, 101</p>
+          <a class="contacts__component contacts__component--phone" href="tel:+79105244118">+ 7 910 524 41 18</a>
+          <a class="contacts__component contacts__component--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
+        </address>
+      </div>
       <div class="contacts__map map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12161.82451689881!2d30.32277346160169!3d59.91275858088447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630519ea47935%3A0x3458dd62ea82672d!2z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0J7QsdCy0L7QtNC90L7Qs9C-INC60LDQvdCw0LvQsCwgMTAxLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkwMDEz!5e0!3m2!1sru!2sru!4v1694374023737!5m2!1sru!2sru"
@@ -239,15 +250,15 @@
     </section>
   </main>
   <footer class="main-footer">
-    <a class="main-footer__logo logo" href="index.html">
-      <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52">
-        <use href="img/sprite.svg#logo"></use>
-      </svg>
-      <svg class="logo__text" role="img" aria-label="Текст логотипа Ягод." width="67" height="50">
-        <use href="img/sprite.svg#logo-text"></use>
-      </svg>
-    </a>
-    <div class="main-footer__component">
+    <div class="main-footer__container">
+      <a class="main-footer__logo logo" href="index.html">
+        <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52">
+          <use href="img/sprite.svg#logo"></use>
+        </svg>
+        <svg class="logo__text" role="img" aria-label="Текст логотипа Ягод." width="67" height="50">
+          <use href="img/sprite.svg#logo-text"></use>
+        </svg>
+      </a>
       <ul class="main-footer__list social">
         <li class="social__item">
           <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
@@ -265,14 +276,14 @@
           </a>
         </li>
       </ul>
+      <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive"
+        aria-label="Лендинг интенсива HTML Academy">
+        <span class="copyright__text">HTML Academy</span>
+        <svg class="copyright__icon" aria-label="Разработано htmlacademy" focusable="false" width="20" height="24">
+          <use href="img/sprite.svg#htmlacademy"></use>
+        </svg>
+      </a>
     </div>
-    <a class="main-footer__component copyright" href="https://htmlacademy.ru/intensive/adaptive"
-      aria-label="Лендинг интенсива HTML Academy">
-      <span class="copyright__text">HTML Academy</span>
-      <svg class="copyright__icon" aria-label="Разработано htmlacademy" focusable="false" width="20" height="24">
-        <use href="img/sprite.svg#htmlacademy"></use>
-      </svg>
-    </a>
   </footer>
   <script src="js/script.js"></script>
 </body>

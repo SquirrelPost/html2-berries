@@ -18,34 +18,36 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo" title="Вы сейчас на главной.">
-      <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52">
-        <use href="img/sprite.svg#logo"></use>
-      </svg>
-      <svg class="logo__text" role="img" aria-label="Текст логотипа Ягод." width="67" height="50">
-        <use href="img/sprite.svg#logo-text"></use>
-      </svg>
-    </a>
-    <!-- При отключенном js - отработает класс "main-nav--nojs". Открытое меню - "main-nav--opened". Закрытое меню - "main-nav--closed"-->
-    <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
-      </button>
-      <ul class="main-nav__list site">
-        <li class="main-nav__site-item site__item">
-          <a class="site__link" href="#">Каталог</a>
-        </li>
-        <li class="main-nav__site-item site__item">
-          <a class="site__link" href="#news">Новости</a>
-        </li>
-        <li class="main-nav__site-item site__item">
-          <a class="site__link" href="#contacts">Контакты</a>
-        </li>
-        <li class="main-nav__site-item site__item">
-          <a class="site__link" href="form.html">Заказать</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="main-header__container">
+      <a class="main-header__logo logo" title="Вы сейчас на главной.">
+        <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52">
+          <use href="img/sprite.svg#logo"></use>
+        </svg>
+        <svg class="logo__text" role="img" aria-label="Текст логотипа Ягод." width="67" height="50">
+          <use href="img/sprite.svg#logo-text"></use>
+        </svg>
+      </a>
+      <!-- При отключенном js - отработает класс "main-nav--nojs". Открытое меню - "main-nav--opened". Закрытое меню - "main-nav--closed"-->
+      <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <ul class="main-nav__list site">
+          <li class="main-nav__site-item site__item">
+            <a class="site__link" href="#catalog">Каталог</a>
+          </li>
+          <li class="main-nav__site-item site__item">
+            <a class="site__link" href="#news">Новости</a>
+          </li>
+          <li class="main-nav__site-item site__item">
+            <a class="site__link" href="#contacts">Контакты</a>
+          </li>
+          <li class="main-nav__site-item site__item">
+            <a class="site__link" href="form.html">Заказать</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="page-main">
     <div class="hero">
@@ -65,7 +67,7 @@
         <a class="hero__link button" href="form.html">Заказать</a>
       </div>
     </div>
-    <section class="products">
+    <section class="products" id="catalog">
       <h2 class="products__title headline">Каталог</h2>
       <ul class="products__list">
         <li class="products__item product-card">
@@ -221,7 +223,8 @@
           <article class="news__article article">
             <h3 class="article__title caption caption--big">Новый урожай клубники</h3>
             <p class="article__text">К нам поступила свежая сочная ароматная клубника
-              из Алтайского края. Крупные отборные ягоды можно приобрести свежими от 200 гр, или замороженными от 1 кг.
+              из Алтайского края. Крупные отборные ягоды можно приобрести свежими от&nbsp;200&nbsp;гр, или замороженными
+              от&nbsp;1&nbsp;кг.
               Поторопитесь, сезон клубники короткий и свежие ягоды скоро закончатся.</p>
             <span class="article__date">22 июня 2022</span>
           </article>
@@ -229,15 +232,16 @@
         <li class="news__item">
           <article class="news__article article">
             <h3 class="article__title caption caption--big">В июне дарим скидку&nbsp;15% на все свежие ягоды</h3>
-            <p class="article__text">Свежие ягоды урожая этого года со скидкой 15%. Клубнику, малину, голубику, вишню
-              доставим от 200 гр. </p>
+            <p class="article__text">Свежие ягоды урожая этого года со&nbsp;скидкой 15%. Клубнику, малину, голубику,
+              вишню
+              доставим от&nbsp;200&nbsp;гр. </p>
             <span class="article__date">15 июня 2022</span>
           </article>
         </li>
         <li class="news__item">
           <article class="news__article article">
             <h3 class="article__title caption caption--big">Микс из ягод</h3>
-            <p class="article__text">Мы приготовим для вас смеси из&nbsp;различных замороженных ягод по вашему
+            <p class="article__text">Мы приготовим для вас смеси из&nbsp;различных замороженных ягод по&nbsp;вашему
               пожеланию.
               Ягодные смеси удобно использовать для приготовления напитков. Все ягоды замораживаются методом шоковой
               заморозки, что позволяет сохранить их&nbsp;естественный вкус и аромат.</p>
@@ -252,12 +256,8 @@
         <p class="contacts__description caption">Забери ягоды с нашего склада по&nbsp;адресу:</p>
         <address class="contacts__address">
           <p class="contacts__component contacts__component--leaf">Набережная Обводного канала, 101</p>
-          <p class="contacts__component contacts__component--phone">
-            <a class="contacts__link" href="tel:+79105244118">+ 7 910 524 41 18</a>
-          </p>
-          <p class="contacts__component contacts__component--mail">
-            <a class="contacts__link" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
-          </p>
+          <a class="contacts__component contacts__component--phone" href="tel:+79105244118">+ 7 910 524 41 18</a>
+          <a class="contacts__component contacts__component--mail" href="mailto:info@yagoda.ru">info@yagoda.ru</a>
         </address>
       </div>
       <div class="contacts__map map">
@@ -284,15 +284,15 @@
     </section>
   </main>
   <footer class="main-footer">
-    <a class="main-footer__logo logo" title="Вы сейчас на главной.">
-      <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52">
-        <use href="img/sprite.svg#logo"></use>
-      </svg>
-      <svg class="logo__text" role="img" aria-label="Текст логотипа Ягод." width="67" height="50">
-        <use href="img/sprite.svg#logo-text"></use>
-      </svg>
-    </a>
-    <div class="main-footer__component">
+    <div class="main-footer__container">
+      <a class="main-footer__logo logo" title="Вы сейчас на главной.">
+        <svg class="logo__icon" role="img" aria-label="Иконка логотипа Ягод." width="52" height="52">
+          <use href="img/sprite.svg#logo"></use>
+        </svg>
+        <svg class="logo__text" role="img" aria-label="Текст логотипа Ягод." width="67" height="50">
+          <use href="img/sprite.svg#logo-text"></use>
+        </svg>
+      </a>
       <ul class="main-footer__list social">
         <li class="social__item">
           <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
@@ -310,14 +310,14 @@
           </a>
         </li>
       </ul>
+      <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive"
+        aria-label="Лендинг интенсива HTML Academy">
+        <span class="copyright__text">HTML Academy</span>
+        <svg class="copyright__icon" aria-label="Разработано htmlacademy" focusable="false" width="20" height="24">
+          <use href="img/sprite.svg#htmlacademy"></use>
+        </svg>
+      </a>
     </div>
-    <a class="main-footer__component copyright" href="https://htmlacademy.ru/intensive/adaptive"
-      aria-label="Лендинг интенсива HTML Academy">
-      <span class="copyright__text">HTML Academy</span>
-      <svg class="copyright__icon" aria-label="Разработано htmlacademy" focusable="false" width="20" height="24">
-        <use href="img/sprite.svg#htmlacademy"></use>
-      </svg>
-    </a>
   </footer>
   <script src="js/script.js"></script>
 </body>

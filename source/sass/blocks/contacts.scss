@@ -1,33 +1,40 @@
 .contacts {
-  // @include centerer;
   padding: 0;
-  //   position: relative;
   margin-bottom: 64px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include centerer;
+    display: grid;
+    grid-template-columns: 552px auto;
+    column-gap: 26px;
+    margin-bottom: 100px;
+  }
 }
 
 .contacts__container {
   @include centerer;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   gap: 2px;
-  //   margin: 0 auto;
-  //   padding-block: 26px;
-  //   background-color: $color-white;
+  margin-bottom: 24px;
 
-  //   @media (min-width: $tablet-width) {
-  //     padding: 56px 70px;
-  //     line-height: 26px;
-  //   }
+  @media (min-width: $tablet-width) {
+    padding-inline: 180px;
+    margin-bottom: 40px;
+  }
 
-  //   @media (min-width: $desktop-width) {
-  //     position: absolute;
-  //     top: 95px;
-  //     left: 110px;
-  //     max-height: 305px;
-  //     padding-inline: 79px 60px;
-  //     z-index: 1;
-  //   }
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin: 0;
+    grid-column: 2 / 3;
+    //     position: absolute;
+    //     top: 95px;
+    //     left: 110px;
+    //     max-height: 305px;
+    //     padding-inline: 79px 60px;
+    //     z-index: 1;
+  }
 
   //   &--inner {
   //     background-color: $color-background;
@@ -41,44 +48,60 @@
 .contacts__title {
   max-width: 266px;
   margin: 0 auto 64px;
-  //   color: $color-dark;
   //   overflow: hidden;
   //   text-overflow: ellipsis;
 
-  //   @media (min-width: $tablet-width) {
-  //     line-height: 26px;
-  //   }
+  @media (min-width: $tablet-width) {
+    max-width: 400px;
+    margin-bottom: 72px;
+  }
 
-  //   @media (min-width: $desktop-width) {
-  //     margin-right: 78px;
-  //   }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 48px;
+  }
 }
 
 .contacts__description {
   margin: 0;
   margin-bottom: 34px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px);
+    text-align: start;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 94px;
+  }
 }
 
 .contacts__address {
   display: grid;
-  grid-template-columns: 32px 230px;
-  align-items: center;
-  gap: 12px 4px;
+  gap: 12px;
   //   max-width: 175px;
   //   min-width: 139px;
   font-style: normal;
-  margin-bottom: 24px;
   //   overflow: hidden;
   //   text-overflow: ellipsis;
 
-  //   @media (min-width: $tablet-width) {
-  //     text-align: end;
-  //     margin-bottom: 7px;
+  @media (min-width: $tablet-width) {
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 94px;
+  }
 }
 
 .contacts__component {
-  display: contents;
+  @include link-reset;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  max-width: fit-content;
+  margin: 0;
 
   &::before {
     content: "";
@@ -102,22 +125,6 @@
       mask-image: url("../img/sprite.svg#icon-phone");
       mask-size: 16px 20px;
     }
-
-    &:hover {
-      color: $color-green-hover;
-
-      &::before {
-        background-color: $color-green-hover;
-      }
-    }
-
-    &:active {
-      color: $color-green;
-
-      &::before {
-        background-color: $color-green;
-      }
-    }
   }
 
   &--mail {
@@ -125,41 +132,30 @@
       mask-image: url("../img/sprite.svg#icon-mail");
       mask-size: 18px 14px;
     }
+  }
 
-    &:hover {
-      color: $color-green-hover;
+  &[href]:hover {
+    color: $color-green-hover;
 
-      &::before {
-        background-color: $color-green-hover;
-      }
+    &::before {
+      background-color: $color-green-hover;
     }
+  }
 
-    &:active {
-      color: $color-green;
+  &[href]:active {
+    color: $color-green;
 
-      &::before {
-        background-color: $color-green;
-      }
+    &::before {
+      background-color: $color-green;
     }
+  }
+
+  &[href]:focus-visible {
+    @include focus-outline;
   }
 }
 
-.contacts__link {
-  @include link-reset;
-  position: relative;
-
-  &:focus-visible {
-    outline: none;
-
-    &::after {
-      @include focus-outline;
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -36px;
-      transform: translateY(-50%);
-      width: calc(100% + 36px);
-      height: 32px;
-    }
-  }
+.contacts__map {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }

@@ -31,10 +31,36 @@
   @media (min-width: 1440px) {
     padding-left: 156px;
     padding-right: 156px;
+    max-width: 1440px;
   }
 }
 
 @mixin link-reset {
   color: inherit;
   text-decoration: none;
+}
+
+@mixin leaf-line {
+  position: relative;
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 72px;
+  }
+
+  &::after {
+    content: "";
+    width: 228px;
+    height: 32px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/sprite.svg#icon-leaf-line");
+
+    @media (min-width: $tablet-width) {
+      width: 296px;
+      height: 42px;
+    }
+  }
 }

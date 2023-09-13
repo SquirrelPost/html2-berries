@@ -1,34 +1,33 @@
 .products {
   @include centerer;
+  @include leaf-line;
   position: relative;
   margin-bottom: 64px;
   padding: 0 28px 96px;
-  //   @media (min-width: $tablet-width) {
-  //     @include container;
-  //     display: flex;
-  //     justify-content: center;
-  //     margin-bottom: 68px;
-  //   }
 
-  //   @media (min-width: $desktop-width) {
-  //     margin-bottom: 75px;
-  //   }
+  @media (min-width: $tablet-width) {
+    padding: 0 94px 142px;
+    margin-bottom: 72px;
+  }
 
-  &::after {
-    content: "";
-    width: 228px;
-    height: 32px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: url("../img/sprite.svg#icon-leaf-line");
+  @media (min-width: $desktop-width) {
+    margin-bottom: 98px;
+    max-width: 1028px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-inline: 156px;
+    max-width: 1440px;
   }
 }
 
 .products__title {
   margin: 0;
   margin-bottom: 64px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
 }
 
 .products__list {
@@ -37,14 +36,15 @@
   flex-direction: column;
   gap: 24px;
 
-  //   @media (min-width: $tablet-width) {
-  //     justify-content: center;
-  //     flex-wrap: wrap;
-  //     gap: 60px;
-  //   }
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    //     justify-content: center;
+    flex-wrap: wrap;
+    gap: 52px;
+  }
 
-  //   @media (min-width: $desktop-width) {
-  //     justify-content: flex-start;
-  //     gap: 60px 80px;
-  //   }
+  @media (min-width: $desktop-width) {
+    //     justify-content: flex-start;
+    gap: 52px 24px;
+  }
 }

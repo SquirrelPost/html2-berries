@@ -14,16 +14,23 @@
   background-color: $color-purple;
   color: $color-white;
   box-shadow: 0 4px 4px 0 rgba(88, 13, 101, 0.25);
-  padding: 14px;
+  padding: 16px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     @include font(28px);
-    padding: 16px;
+    padding: 16px 16px 18px;
+    letter-spacing: 1.4px;
   }
 
   &--catalog {
     box-shadow: none;
+    padding: 14px;
+
+    @media (min-width: $tablet-width) {
+      @include font(20px);
+      letter-spacing: 1px;
+    }
   }
 
   &:hover {

@@ -3,8 +3,9 @@
   min-width: 320px;
   min-height: 372px;
 
-  // @media (min-width: $tablet-width) {
-  // }
+  @media (min-width: $desktop-width) {
+    max-width: 552px;
+  }
 
   iframe {
     display: block;
@@ -12,8 +13,9 @@
     border: none;
     border-radius: 40px;
 
-    // @media (min-width: $tablet-width) {
-    // }
+    @media (min-width: $desktop-width) {
+      height: 100%;
+    }
   }
 }
 
