@@ -4,6 +4,16 @@
   margin-bottom: 50px;
   padding: 0 0 50px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 73px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 65px;
+    margin-bottom: 62px;
+  }
+
   &::before {
     content: "";
     width: 100%;
@@ -22,9 +32,10 @@
 
     @media (min-width: $tablet-width) {
       background-image: url("../img/hero/inner-hero-bg-tablet.jpg");
+      height: 200px;
       //     // background-position: center top;
       //     min-height: 924px;
-      //     margin-bottom: 100px;
+      margin-bottom: 100px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/hero/inner-hero-bg-tablet@2x.jpg");
@@ -46,35 +57,26 @@
 
 .inner-hero__container {
   @include centerer;
-  //   padding-top: 68px;
 
-  //   @media (min-width: $tablet-width) {
-  //     padding: 142px 22px 22px 214px;
-  //   }
-
-  //   @media (min-width: $desktop-width) {
-  //     padding-left: 400px;
-  //   }
-
-  //   @media (min-width: 1440px) {
-  //     padding: 172px 156px 40px 539px;
-  //   }
+  @media (min-width: $tablet-width) {
+    padding-inline: 118px;
+  }
 }
 
 .inner-hero__title {
   max-width: 268px;
-  margin: 0;
-  margin-bottom: 32px;
+  margin: 0 auto 32px;
   //   //   padding-bottom: 5px;
   //   //   max-height: 150px;
   //   //   overflow: hidden;
   //   //   text-overflow: ellipsis;
 
-  //   @media (min-width: $tablet-width) {
-  //     max-width: 550px;
-  //     //     max-height: min-content;
-  //     margin-bottom: 48px;
-  //   }
+  @media (min-width: $tablet-width) {
+    @include font(52px);
+    max-width: 532px;
+    margin-bottom: 48px;
+    //     //     max-height: min-content;
+  }
 
   //   @media (min-width: $desktop-width) {
   //     margin-bottom: 52px;
@@ -87,18 +89,13 @@
   margin: 0 auto 23px;
   text-align: center;
 
-  //   @media (min-width: $tablet-width) {
-  //     @include font(18px);
-  //     line-height: 22px;
-  //   }
+  @media (min-width: $tablet-width) {
+    @include font(18px);
+    line-height: 22px;
+    max-width: 520px;
+  }
 
-  //   @media (min-width: $desktop-width) {
-  //     line-height: normal;
-  //   }
+  @media (min-width: $desktop-width) {
+    max-width: 550px;
+  }
 }
-
-// .hero__link {
-//   @media (min-width: $desktop-width) {
-//     margin-left: 37px;
-//   }
-// }

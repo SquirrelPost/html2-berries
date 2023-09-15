@@ -11,14 +11,14 @@
   }
 
   &--opened {
-    .main-nav__toggle::before {
-      mask-image: url("../img/sprite.svg#menu-cross");
-      mask-size: 28px;
-      background-color: rgba(15, 128, 93, 0.75);
-      // top: 20px;
-      // right: 29px;
-      // width: 28px;
-      // height: 28px;
+    .main-nav__toggle {
+      transform: translateX(8px);
+
+      &::before {
+        mask-image: url("../img/sprite.svg#menu-cross");
+        mask-size: 28px;
+        background-color: rgba(15, 128, 93, 0.75);
+      }
     }
 
     .main-nav__list {

@@ -3,4 +3,18 @@
   @include leaf-line;
   margin-bottom: 61px;
   padding-bottom: 121px;
+
+  @media (min-width: $tablet-width) {
+    padding-inline: 72px;
+    margin-bottom: 72px;
+    padding-bottom: 142px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-inline: 300px;
+  }
 }

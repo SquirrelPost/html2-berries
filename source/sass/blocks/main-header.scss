@@ -23,14 +23,14 @@
 .main-header__container {
   @media (min-width: $tablet-width) {
     @include centerer;
-    padding-block: 22px;
+    padding-block: 21px 22px;
     display: flex;
     align-items: center;
     gap: 87px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 24px 192px 24px 156px;
+    padding: 23px 192px 24px 156px;
   }
 }
 

@@ -138,16 +138,16 @@
         </fieldset>
         <fieldset class="form__group">
           <legend class="form__legend caption caption--big">Вид хранения</legend>
-          <ul class="form__list">
+          <ul class="form__list form__list--type">
             <li class="form__item">
-              <label class="form__label control">
+              <label class="form__label control control--long">
                 <input class="visually-hidden control__input" type="checkbox" name="fresh-berries">
                 <span class="control__mark"></span>
                 <span class="control__label">свежие ягоды</span>
               </label>
             </li>
             <li class="form__item">
-              <label class="form__label control">
+              <label class="form__label control control--long">
                 <input class="visually-hidden control__input" type="checkbox" name="frozen-berries">
                 <span class="control__mark"></span>
                 <span class="control__label">замороженные ягоды</span>
@@ -164,19 +164,20 @@
         </fieldset>
         <fieldset class="form__group">
           <legend class="form__legend caption caption--big">Способ доставки</legend>
-          <ul class="form__list">
+          <ul class="form__list form__list--delivery">
             <li class="form__item">
               <label class="form__label control">
                 <input class="visually-hidden control__input" type="radio" name="delivery" value="spb" checked>
                 <span class="control__mark"></span>
-                <span class="control__label">Доставка <br>(по СПБ в пределах <br>КАД)</span>
+                <span class="control__label control__label--short">Доставка <br>(по СПБ в пределах &nbsp;КАД)</span>
               </label>
             </li>
             <li class="form__item">
               <label class="form__label control">
                 <input class="visually-hidden control__input" type="radio" name="delivery" value="pickup">
                 <span class="control__mark"></span>
-                <span class="control__label">Самовывоз <br>(Набережная Обводного канала, 101)</span>
+                <span class="control__label control__label--short">Самовывоз <br>(Набережная&nbsp;Обводного канала,
+                  101)</span>
               </label>
             </li>
           </ul>
@@ -187,27 +188,27 @@
         с нужным текстом после input внутри label -->
         <fieldset class="form__group form__group--contacts">
           <legend class="form__legend form__legend--centered caption caption--big">Ваши контакты</legend>
-          <label class="form__label">
+          <label class="form__label form__label--name">
             <span class="form__label-text">Имя <span class="form__label-asterisk">*</span></span>
             <input class="form__field field" type="text" pattern="^[0-9A-Za-zА-Яа-яЁё\s]+$" name="client-name"
               placeholder="Как к вам обращаться?" required>
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--phone">
             <span class="form__label-text">Телефон <span class="form__label-asterisk">*</span></span>
             <input class="form__field field" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$"
               name="client-phone" placeholder="+7 ххх ххх хх хх" required>
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--mail">
             <span class="form__label-text">Email <span class="form__label-asterisk">*</span></span>
             <input class="form__field field" type="email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
               name="client-email" placeholder="Ваш email" required>
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--address">
             <span class="form__label-text">Адрес <span class="form__label-asterisk">*</span></span>
-            <textarea class="form__field field field--textarea" name="client-address" rows="3"
+            <textarea class="form__field field field--textarea-address" name="client-address" rows="3"
               placeholder="Адрес в Санкт-Петербурге" required></textarea>
           </label>
-          <label class="form__label">
+          <label class="form__label form__label--wishes">
             <span class="form__label-text form__label-text--wishes">Пожелания к заказу</span>
             <textarea class="form__field field field--textarea" name="client-comment" rows="5"
               placeholder="Чем мы можем вам помочь?"></textarea>

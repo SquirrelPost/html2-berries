@@ -9,14 +9,14 @@
 
   @media (max-width: $mobile-width-only) {
     position: relative;
-    gap: 8px;
+    gap: 4px;
     padding: 20px 40px;
     background-color: $color-light-blue;
   }
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
     max-width: 496px;
     align-items: center;
     column-gap: 16px;
@@ -24,6 +24,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: auto;
+    grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
     max-width: 612px;
     column-gap: 28px;
   }
@@ -34,7 +35,7 @@
   position: relative;
 
   &--current a {
-    border-bottom: 2px solid $color-green;
+    color: $color-green;
   }
 
   @media (min-width: $tablet-width) {
@@ -47,6 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: fit-content;
   padding: 12px 0 12px;
 
   &[href]:hover {
@@ -63,6 +65,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 20px 0 17px;
-    max-width: min-content;
+    // max-width: min-content;
+    // max-width: max-content;
   }
 }

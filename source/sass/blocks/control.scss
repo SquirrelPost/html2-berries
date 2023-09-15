@@ -8,9 +8,21 @@
   border: 2px solid transparent;
   line-height: normal;
 
-  //   @media (min-width: $tablet-width) {
-  //     gap: 20px;
-  //   }
+  @media (min-width: $tablet-width) {
+    line-height: 22px;
+  }
+
+  &--long {
+    @media (min-width: $tablet-width) {
+      gap: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 12px;
+      // flex-shrink: 1;
+      // flex-grow: 0;
+    }
+  }
 
   &:hover .control__mark {
     border-color: $color-green-hover;
@@ -52,6 +64,22 @@
   }
 }
 
+.control__label {
+  &--short {
+    max-width: 190px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 214px;
+      flex-shrink: 1;
+      flex-grow: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 320px;
+    }
+  }
+}
+
 .control__input[type="checkbox"]:checked+.control__mark::before {
   width: 14px;
   height: 11px;
@@ -68,6 +96,8 @@
 
 .control__input[type="radio"]+.control__mark {
   border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
 
 .control__input[type="radio"]:checked+.control__mark::before {

@@ -52,8 +52,7 @@
 }
 
 .hero__title {
-  margin: 0;
-  margin-bottom: 32px;
+  margin: 0 auto 30px;
   //   padding-bottom: 5px;
   max-width: 265px;
   //   max-height: 150px;
@@ -62,8 +61,9 @@
 
   @media (min-width: $tablet-width) {
     max-width: 550px;
+    text-align: start;
     //     max-height: min-content;
-    margin-bottom: 48px;
+    margin: 0 0 46px;
   }
 
   @media (min-width: $desktop-width) {
@@ -73,22 +73,23 @@
 
 .hero__list {
   @include list-reset;
-  margin-bottom: 48px;
+  margin-bottom: 53px;
   padding-inline: 28px;
   display: grid;
   grid-template-columns: 32px auto;
-  gap: 12px;
+  gap: 13px 14px;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     padding-inline: 0 45px;
     row-gap: 19px;
+    margin-bottom: 49px;
   }
 
   @media (min-width: $desktop-width) {
     padding-inline: 23px;
     max-width: 550px;
-    margin-bottom: 52px;
+    margin-bottom: 55px;
   }
 }
 
@@ -106,7 +107,7 @@
 
   &--leaf::before {
     background-image: url("../img/sprite.svg#icon-leaf-skew");
-    background-size: 21px;
+    background-size: 22px;
   }
 
   &--snowflake::before {
@@ -116,6 +117,12 @@
 
   &--delivery::before {
     background-image: url("../img/sprite.svg#icon-delivery");
+    background-size: 33px;
+    background-position: 2px 3px;
+
+    @media (min-width: $tablet-width) {
+      background-position: 0 0;
+    }
   }
 }
 
@@ -123,9 +130,17 @@
   @include font(16px);
   margin: 0;
 
+  &--long {
+    padding-bottom: 5px;
+  }
+
   @media (min-width: $tablet-width) {
     @include font(18px);
     line-height: 22px;
+
+    &--long {
+      padding-bottom: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {

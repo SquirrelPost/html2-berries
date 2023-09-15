@@ -15,16 +15,25 @@
   @media (min-width: $tablet-width) {
     min-height: 494px;
     max-width: 348px;
-    padding: 30px 34px 104px;
+    padding: 30px 34px 102px;
     background-size: 96px 40px;
-    background-position: bottom 42px center;
+    background-position: bottom 38px center;
+
+    &--last {
+      transform: translateX(-5px);
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 492px;
     max-width: 360px;
-    padding-bottom: 106px;
-    background-position: bottom 44px center;
+    padding-inline: 33px;
+    padding-bottom: 104px;
+    background-position: bottom 41px center;
+
+    &--last {
+      transform: none;
+    }
   }
 }
 
@@ -39,7 +48,7 @@
   min-height: 68px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 24px;
+    margin-bottom: 27px;
     min-height: 100px;
   }
 
