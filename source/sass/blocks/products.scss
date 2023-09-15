@@ -24,6 +24,7 @@
 .products__title {
   margin: 0;
   margin-bottom: 64px;
+  overflow: auto;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 72px;
@@ -42,13 +43,11 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    //     justify-content: center;
     flex-wrap: wrap;
     gap: 52px;
   }
 
   @media (min-width: $desktop-width) {
-    //     justify-content: flex-start;
     gap: 52px 24px;
   }
 }

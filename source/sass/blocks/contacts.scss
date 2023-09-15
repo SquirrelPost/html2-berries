@@ -21,7 +21,7 @@
 
   @media (min-width: $tablet-width) {
     padding-inline: 180px;
-    margin-bottom: 42px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: $desktop-width) {
@@ -35,8 +35,7 @@
   max-width: 266px;
   margin: 0 auto 64px;
   padding-right: 10px;
-  //   overflow: hidden;
-  //   text-overflow: ellipsis;
+  overflow: auto;
 
   @media (min-width: $tablet-width) {
     max-width: 400px;
@@ -68,11 +67,7 @@
 .contacts__address {
   display: grid;
   gap: 11px;
-  //   max-width: 175px;
-  //   min-width: 139px;
   font-style: normal;
-  //   overflow: hidden;
-  //   text-overflow: ellipsis;
 
   @media (min-width: $tablet-width) {
     line-height: 20px;
@@ -94,6 +89,7 @@
 
   &::before {
     content: "";
+    flex-shrink: 0;
     position: relative;
     width: 32px;
     height: 32px;

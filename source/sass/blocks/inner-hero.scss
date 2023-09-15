@@ -33,8 +33,6 @@
     @media (min-width: $tablet-width) {
       background-image: url("../img/hero/inner-hero-bg-tablet.jpg");
       height: 200px;
-      //     // background-position: center top;
-      //     min-height: 924px;
       margin-bottom: 100px;
 
       @media (min-resolution: 2dppx) {
@@ -44,9 +42,6 @@
 
     @media (min-width: $desktop-width) {
       background-image: url("../img/hero/inner-hero-bg-desktop.jpg");
-      //     background-position: 0 0;
-      //     min-height: 797px;
-      //     margin-bottom: 103px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/hero/inner-hero-bg-desktop@2x.jpg");
@@ -66,21 +61,13 @@
 .inner-hero__title {
   max-width: 268px;
   margin: 0 auto 32px;
-  //   //   padding-bottom: 5px;
-  //   //   max-height: 150px;
-  //   //   overflow: hidden;
-  //   //   text-overflow: ellipsis;
+  overflow: auto;
 
   @media (min-width: $tablet-width) {
     @include font(52px);
     max-width: 532px;
     margin-bottom: 48px;
-    //     //     max-height: min-content;
   }
-
-  //   @media (min-width: $desktop-width) {
-  //     margin-bottom: 52px;
-  //   }
 }
 
 .inner-hero__text {

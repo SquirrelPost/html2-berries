@@ -42,8 +42,9 @@
   }
 
   .main-nav--nojs.main-nav {
-    position: static;
+    position: relative;
     min-height: 0;
+    z-index: 1;
   }
 
   .main-nav--nojs .main-nav__site-item {

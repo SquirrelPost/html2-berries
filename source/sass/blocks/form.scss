@@ -44,6 +44,7 @@
   color: $color-green;
   margin-bottom: 24px;
   padding: 0;
+  overflow: auto;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 32px;
@@ -58,12 +59,12 @@
 
     @media (min-width: $tablet-width) {
       text-align: center;
-      margin-bottom: 37px;
+      margin: 0 auto 37px;
     }
 
     @media (min-width: $desktop-width) {
       text-align: start;
-      margin-bottom: 47px;
+      margin: 0 0 47px;
     }
   }
 }
@@ -73,10 +74,6 @@
   flex-direction: column;
   gap: 4px;
   line-height: 20px;
-
-  &--wishes {
-    gap: 7px;
-  }
 
   @media (min-width: $tablet-width) {
     &--name {
@@ -103,11 +100,6 @@
 
 .form__label-text {
   padding-left: 12px;
-  //   flex-shrink: 0;
-  //   max-width: 100px;
-  //   color: $color-grey;
-  //   text-overflow: ellipsis;
-  //   overflow: hidden;
 
   &--wishes {
     @media (max-width: $mobile-width-only) {
@@ -115,14 +107,7 @@
       padding-left: 22px;
       line-height: normal;
     }
-
-    // margin-bottom: 5px;
   }
-
-  // @media (min-width: $tablet-width) {
-  // @include font(16px);
-  //     max-width: 117px;
-  // }
 }
 
 .form__label-asterisk {
@@ -142,8 +127,8 @@
 .form__list {
   @include list-reset;
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(40px, 1fr));
-  grid-template-columns: repeat(auto-fit, minmax(134px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(40px, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(134px, max-content));
   grid-auto-flow: column;
   gap: 16px 9px;
   max-height: 320px;
@@ -155,12 +140,12 @@
 
   @media (min-width: $tablet-width) {
     max-height: 184px;
-    gap: 8px 15px;
+    gap: 8px 48px;
     margin-bottom: 4px;
 
     &--type {
       max-height: 88px;
-      column-gap: 18px;
+      column-gap: 38px;
       margin-bottom: 0;
     }
 
@@ -177,7 +162,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     column-gap: 44px;
-    max-height: 96px;
+    max-height: 104px;
     margin-bottom: 13px;
 
     &--type {
@@ -193,13 +178,6 @@
   }
 }
 
-// .form__item {
-// @media (min-width: $desktop-width) {
-// flex-shrink: 1;
-// flex-grow: 0;
-// }
-// }
-
 .form__button {
   @media (max-width: $mobile-width-only) {
     padding-right: 26px;
@@ -208,12 +186,5 @@
   @media (min-width: $tablet-width) {
     display: block;
     margin: 0 auto;
-    //     line-height: 26px;
-    //     max-width: 282px;
-    //     padding: 13px;
   }
-
-  //   @media (min-width: $desktop-width) {
-  //     max-width: 568px;
-  //   }
 }

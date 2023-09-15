@@ -71,23 +71,23 @@
     mask-image: url("../img/sprite.svg#youtube");
   }
 
-    &:hover {
-      border-color: $color-green-hover;
+  &:hover {
+    border-color: $color-green-hover;
 
-      &::after {
-        background-color: $color-green-hover;
-      }
+    &::after {
+      background-color: $color-green-hover;
     }
+  }
 
-    &:active {
-      border-color: $color-green-active;
+  &:active {
+    border-color: $color-green-active;
 
-      &::after {
-        background-color: $color-green-active;
-      }
+    &::after {
+      background-color: $color-green-active;
     }
+  }
 
-    &:focus-visible {
-      @include focus-outline;
-    }
+  &:focus-visible {
+    @include focus-outline;
+  }
 }

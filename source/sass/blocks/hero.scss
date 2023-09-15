@@ -13,7 +13,6 @@
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/hero/hero-bg-tablet.jpg");
-    // background-position: center top;
     min-height: 924px;
     margin-bottom: 100px;
 
@@ -53,16 +52,12 @@
 
 .hero__title {
   margin: 0 auto 30px;
-  //   padding-bottom: 5px;
   max-width: 265px;
-  //   max-height: 150px;
-  //   overflow: hidden;
-  //   text-overflow: ellipsis;
+  overflow: auto;
 
   @media (min-width: $tablet-width) {
     max-width: 550px;
     text-align: start;
-    //     max-height: min-content;
     margin: 0 0 46px;
   }
 
@@ -149,6 +144,8 @@
 }
 
 .hero__link {
+  overflow: auto;
+
   @media (min-width: $desktop-width) {
     margin-left: 37px;
   }

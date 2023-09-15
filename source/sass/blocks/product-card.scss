@@ -7,22 +7,6 @@
   max-width: 264px;
   box-shadow: 0 4px 4px 0 rgba(88, 13, 101, 0.15);
 
-  //   @media (min-width: $tablet-width) {
-  //     padding: 8px 36px 39px;
-  //     display: flex;
-  //     flex-direction: column;
-  //     align-items: center;
-  //     row-gap: 31px;
-  //     background-image: linear-gradient(to bottom, $color-white 81px, $color-background 81px);
-  //     max-width: 324px;
-  //   }
-
-  //   @media (min-width: $desktop-width) {
-  //     padding: 1px 35px 40px 40px;
-  //     row-gap: 34px;
-  //     max-width: 245px;
-  //   }
-
   &--extra {
     @media (max-width: $mobile-width-only) {
       display: none;
@@ -34,21 +18,6 @@
   display: inline-flex;
   margin-bottom: 28px;
   border-radius: 40px 40px 0px 0px;
-  //   min-width: 135px;
-  //   min-height: 112px;
-  //   margin-right: 5px;
-
-  //   @media (min-width: $tablet-width) {
-  //     min-width: 252px;
-  //     min-height: 200px;
-  //     margin-right: 0;
-  //   }
-
-  //   @media (min-width: $desktop-width) {
-  //     min-width: 172px;
-  //     min-height: 196px;
-  //     margin-bottom: 13px;
-  //   }
 
   &:hover {
     box-shadow: 0 0 7px 1px $color-green-hover;
@@ -66,10 +35,6 @@
 .product-card__image {
   display: block;
   border-radius: 40px 40px 0px 0px;
-
-  //   @media (min-width: $tablet-width) {
-  //     width: 100%;
-  //   }
 }
 
 .product-card__link-title {
@@ -77,14 +42,8 @@
   color: $color-green;
   display: inline-flex;
   margin-bottom: 26px;
-
-  //   @media (min-width: $tablet-width) {
-  //     text-align: center;
-  //   }
-
-  //   @media (min-width: $desktop-width) {
-  //     margin-bottom: 15px;
-  //   }
+  overflow: auto;
+  max-width: 100%;
 
   &:hover {
     color: $color-green-hover;
@@ -103,14 +62,6 @@
   @include font(28px);
   font-weight: 400;
   margin: 0;
-  //   max-width: 99px;
-  //   text-overflow: ellipsis;
-  //   overflow: hidden;
-
-  //   @media (min-width: $tablet-width) {
-  //     max-width: 159px;
-  //     margin-inline: auto;
-  //   }
 }
 
 .product-card__info {
@@ -124,8 +75,9 @@
 
 .product-card__order {
   max-width: 220px;
+  overflow: auto;
 
-    @media (min-width: $tablet-width) {
-      margin-top: auto;
-    }
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+  }
 }

@@ -46,6 +46,7 @@
   margin: 0;
   margin-bottom: 20px;
   min-height: 68px;
+  padding-inline: 12px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 27px;
@@ -54,6 +55,7 @@
 
   @media (min-width: $desktop-width) {
     min-height: 96px;
+    padding-inline: 0;
   }
 }
 
